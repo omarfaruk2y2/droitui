@@ -1,0 +1,50 @@
+/* CTA */
+.ui-cta-section {
+    padding-bottom: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.ui-cta-container {
+    border-top: 1px solid #0f172a1a;
+    justify-content: space-between;
+    align-items: center;
+    display: block;
+}
+.ui-cta-sec {
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 80px;
+    display: flex;
+}
+.ui-cta-text-sec {
+    width: 100%;
+}
+.ui-cta-btn-sec {
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    display: flex;
+}
+.ui-cta-text-title {
+    color: #0f172a;
+    letter-spacing: -.32px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Inter,sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+}
+.ui-cta-text-para {
+    color: #475569;
+    margin-top: 14px;
+    margin-bottom: 0;
+    font-family: Inter,sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+}
+.ui-hero-btn.ui-cta-btn {
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
