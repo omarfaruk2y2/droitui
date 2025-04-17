@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaPlus, FaMinus } from "react-icons/fa6";
+import FadeUpOnView from '../../components/FadeUpOnView';
 
 const FAQs = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -128,8 +129,12 @@ const FAQs = () => {
   return (
     <div className='ui-faq-section'>
       <div className='ui-theme-features-contain faq-heading-sec'>
+        <FadeUpOnView delay={0.3}>
         <h1 className='ui-theme-features-title'>Frequently Asked Questions</h1>
+        </FadeUpOnView>
+        <FadeUpOnView delay={0.3}>
         <p className='ui-theme-features-text'>Find questions and answers related to the design system, purchase, updates, and support.</p>
+        </FadeUpOnView>
       </div>
       
       <div className='ui-faqs-block'>
@@ -140,6 +145,7 @@ const FAQs = () => {
             onClick={() => toggleFAQ(index)}
             className='ui-faqs-block-item'
           >
+            <FadeUpOnView delay={0.3}>
             <div style={styles.faqItemHeader} className='ui-faqs-block-item-title-sec'>
               <h2 style={styles.faqQuestion} className='ui-faqs-block-item-title'>{item.question}</h2>
               <div style={styles.faqIcons}>
@@ -150,6 +156,7 @@ const FAQs = () => {
                 )}
               </div>
             </div>
+            </FadeUpOnView>
             <div 
               style={{
                 ...styles.faqAnswer,
@@ -157,7 +164,9 @@ const FAQs = () => {
               }}
               className='ui-faqs-block-item-content-sec'
             >
+              <FadeUpOnView delay={0.2}>
               <p className='ui-faqs-block-item-text'>{item.answer}</p>
+              </FadeUpOnView>
             </div>
           </div>
         ))}

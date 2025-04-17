@@ -1,16 +1,23 @@
 import React from 'react'
 import { IoIosArrowForward } from "react-icons/io";
+import FadeUpOnView from './FadeUpOnView';
 
 const CTA = () => {
     return (
+        <FadeUpOnView delay={0.3}>
         <section className="ui-cta-section">
             <div className="w-layout-blockcontainer ui-cta-container container">
                 <div className="ui-cta-sec">
                     <div className="ui-cta-text-sec">
+                        <FadeUpOnView delay={0.3}>
                         <h1 className="ui-cta-text-title">Level Up Your Design Workflow</h1>
+                        </FadeUpOnView>
+                        <FadeUpOnView delay={0.3}>
                         <p className="ui-cta-text-para">Droit UI is the largest UI kit and design system for Figma in the world. Kickstart any project, save thousands of hours</p>
+                        </FadeUpOnView>
                     </div>
                     <div className="ui-cta-btn-sec">
+                        <FadeUpOnView delay={0.3}>
                         <div className="ui-hero-btn ui-cta-btn">
                             <a href="https://www.figma.com/file/j1jhBdnUsYkpiNzcPcR6iu/Droit-UI-For-Figma?type=design&amp;node-id=351%3A443&amp;mode=design&amp;t=i1PIjCbK6TFYKnlw-1" className="ui-hero-btn-1 w-inline-block">
                                 <img src="https://cdn.prod.website-files.com/652a94d2422fddacbf881a46/65b9e0314a580c4a67b20712_figma-icon.svg" loading="lazy" alt="figma icon" className="figma-icon" />
@@ -21,10 +28,12 @@ const CTA = () => {
                                 <div className="ui-hero-btn-icons"><IoIosArrowForward className='text-lg text-white'/></div>
                             </a>
                         </div>
+                        </FadeUpOnView>
                     </div>
                 </div>
             </div>
         </section>
+        </FadeUpOnView>
     )
 }
 

@@ -63,6 +63,7 @@ import Toggle from '../assets/components/Toggle.png'
 import Tooltips from '../assets/components/Tooltips.png'
 import TypographyImage from '../assets/components/Typography.png'
 import WebApplications from '../assets/components/WebApplications.png'
+import FadeUpOnView from './FadeUpOnView';
 
 
 const UIComponentsSection = () => {
@@ -229,13 +230,18 @@ const UIComponentsSection = () => {
     <section className="ui-components-section single-compo-compoents">
       <div className="w-layout-blockcontainer ui-comonents-container container">
         <div className="ui-component-top">
+          <FadeUpOnView delay={0.3}>
           <h1 className="ui-component-title">Over <span className="text-span-2">7000+</span> Base Components, Core Elements, and more!</h1>
+          </FadeUpOnView>
+          <FadeUpOnView delay={0.3}>
           <p className="ui-theme-features-text">The list of Core Elements, Base Components, and more within our design system.</p>
+          </FadeUpOnView>
         </div>
         
         <div className="tabs">
           <div className="tabs-menu" role="tablist">
             {tabs.map(tab => (
+              <FadeUpOnView delay={0.3}>
               <button
                 key={tab.id}
                 className={`tab-link-tab-2 ${activeTab === tab.id ? 'active' : ''}`}
@@ -243,10 +249,12 @@ const UIComponentsSection = () => {
                 role="tab"
                 aria-selected={activeTab === tab.id}
               >
+                
                 <div className="text-block-6">
                   {tab.label}
                 </div>
               </button>
+              </FadeUpOnView>
             ))}
           </div>
           
@@ -259,11 +267,14 @@ const UIComponentsSection = () => {
               >
                 <div className={`ui-component-grid grid-${tab.id.replace('tab', '')}-compo`}>
                   {components[tab.id]?.map((component, index) => (
+                    
                     <a 
                       key={index} 
                       href={`/${component.title.toLowerCase().replace(/\s+/g, '-')}-single`} 
-                      className="ui-component-item"
+                      className=""
                     >
+                      <FadeUpOnView delay={0.3}>
+                      <div className='ui-component-item'>
                       <img
                         loading="lazy"
                         src={component.img}
@@ -275,14 +286,17 @@ const UIComponentsSection = () => {
                         <h1 className="ui-item-component-title">{component.title}</h1>
                         <h2 className="ui-item-component-text">{component.text}</h2>
                       </div>
+                      </div>
+                      </FadeUpOnView>
                     </a>
+                    
                   ))}
                 </div>
               </div>
             ))}
           </div>
         </div>
-        
+        <FadeUpOnView delay={0.3}>
         <div className="ui-hero-btn components-ui-btn">
           <a 
             href="https://www.figma.com/file/j1jhBdnUsYkpiNzcPcR6iu/Droit-UI-For-Figma?type=design&node-id=351%3A443&mode=design&t=i1PIjCbK6TFYKnlw-1" 
@@ -308,6 +322,7 @@ const UIComponentsSection = () => {
             <div className="ui-hero-btn-icons"><IoIosArrowForward className='text-lg text-white' /></div>
           </a>
         </div>
+        </FadeUpOnView>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { IoIosArrowForward } from "react-icons/io";
 import { FaPlus, FaMinus } from "react-icons/fa6";
+import FadeUpOnView from './FadeUpOnView';
 
 const FAQsComponents = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -73,8 +74,12 @@ const FAQsComponents = () => {
   return (
     <div className='ui-faq-section'>
       <div className='ui-theme-features-contain faq-heading-sec'>
+        <FadeUpOnView delay={0.3}>
         <h1 className='ui-theme-features-title'>Frequently Asked Questions</h1>
+        </FadeUpOnView>
+        <FadeUpOnView delay={0.3}>
         <p className='ui-theme-features-text'>Find questions and answers related to the design system, purchase, updates, and support.</p>
+        </FadeUpOnView>
       </div>
       
       <div className='ui-faqs-block'>
@@ -85,6 +90,7 @@ const FAQsComponents = () => {
             onClick={() => toggleFAQ(index)}
             className='ui-faqs-block-item'
           >
+            <FadeUpOnView delay={0.3}>
             <div style={styles.faqItemHeader} className='ui-faqs-block-item-title-sec'>
               <h2 style={styles.faqQuestion} className='ui-faqs-block-item-title'>{item.question}</h2>
               <div style={styles.faqIcons}>
@@ -95,6 +101,7 @@ const FAQsComponents = () => {
                 )}
               </div>
             </div>
+            </FadeUpOnView>
             <div 
               style={{
                 ...styles.faqAnswer,
@@ -102,16 +109,20 @@ const FAQsComponents = () => {
               }}
               className='ui-faqs-block-item-content-sec'
             >
+              <FadeUpOnView delay={0.2}>
               <p className='ui-faqs-block-item-text'>{item.answer}</p>
+              </FadeUpOnView>
             </div>
           </div>
         ))}
         
         <div className='ui-faq-bottom'>
+          <FadeUpOnView delay={0.3}>
             <a href="/faqs" className='ui-all-faq-btn w-inline-block'>
                 <span className='ui-all-faq-text'>See All FAQs</span>
                 <span className='ui-faq-btn-icon'> <IoIosArrowForward className='text-lg'/> </span>
             </a>
+          </FadeUpOnView >
         </div>
         
       </div>
