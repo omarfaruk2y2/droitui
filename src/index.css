@@ -1565,8 +1565,17 @@
     .ui-hero-btn {
         width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+    }
+
+    .ui-features-items-content .ui-hero-btn-2 {
+        padding: 12px 6px 12px 12px;
+        font-size: 16px;
+    }
+    .ui-features-items-content .ui-hero-btn-1 {
+        grid-column-gap: 8px;
+        grid-row-gap: 8px;
+        padding: 12px 12px;
+        font-size: 16px;
     }
 
     /* Counting */
